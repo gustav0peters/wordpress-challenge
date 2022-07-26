@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wordpress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    kubernetes.io/ingress.class: "nginx"  
+    cert-manager.io/issuer: "letsencrypt-prod" 
+spec:
+  tls:
+  - hosts:
+    - app-127-0-0-1.nip.io
+    secretName: app-127-0-0-1.nip.io-tls
+  rules:
+  - host: app-127-0-0-1.nip.io
+    http:
+      paths:
+      - path: /wordpress/(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: wordpress-svc
+            port:
+              number: 80
