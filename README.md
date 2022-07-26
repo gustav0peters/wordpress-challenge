@@ -23,7 +23,7 @@ To be honest I never had any experience with deploying websites with certmanager
     2.1
      Commands:
 
-     minikube start
+     - minikube start
 
      This command is used to create our Cluster.
 
@@ -48,8 +48,8 @@ Notes:
     minikube service wordpress --url -n wordpress
     Now our Wordpress are deployed!!
 
+ ##Working with Cert Manager.
 4.
-  Working with Cert Manager.
  4.1
   I`ve downloaded the Cert Manager from this link
   https://github.com/jetstack/cert-manager/releases/download/v1.6.1/cert-manager.yaml
@@ -60,7 +60,7 @@ Notes:
 
   Now check if the services of Cert Manager are running
 
-  ##kubectl get all -n cert-manager 
+  - kubectl get all -n cert-manager 
 
 4.2
    Create Issuer.yaml this will be responsible to connect with Lets Encrypt to get the certificates.
@@ -86,8 +86,8 @@ Notes:
    When you run the ngrock command you will see this output
 
 #################################################################################
- Session Status                online                                                                                                                                                                            Account                       Gustavo Peters (Plan: Free)                                                                                                                                                       Version                       3.0.6                                                                                                                                                                             Region                        South America (sa)                                                                                                                                                                Latency                       9ms                                                                                                                                                                               Web Interface                 http://127.0.0.1:4040  
- Forwarding                    https://5662-2804-868-d049-236d-d0f9-426b-2eec-a1a4.sa.ngrok.io -> http://127.0.0.1:80
+Session Status                online                                                                                        Account                       Gustavo Peters (Plan: Free)                                                                    Version                       3.0.6                                                                                          Region                        South America (sa)                                                                         Latency                      9ms                                                                                           Web Interface                 http://127.0.0.1:4040  
+Forwarding                    https://5662-2804-868-d049-236d-d0f9-426b-2eec-a1a4.sa.ngrok.io -> http://127.0.0.1:80
 #################################################################################
  So, you can have your site with SSL enabled on
  https://5662-2804-868-d049-236d-d0f9-426b-2eec-a1a4.sa.ngrok.io.
