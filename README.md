@@ -1,29 +1,21 @@
-# wordpress-challenge
-
-Vanilla wordpress deployment
+## Vanilla wordpress deployment
 
 Hi all!
 I hope you are doing well.
 To be honest I never had any experience with deploying websites with certmanager. But i reached the following.
 
-Getting started
+## Getting started
 
 1-
   In this first step we`ll set up our enviroment.
 
   1.1 Download Docker Desktop
-  ## This will be used to run the Minikube.
-
-  Link:
+  This will be used to run the Minikube.
 
   1.2 Download Minikube
-  ##This service will be used to deploy the Vanilla Wordpress in containers.
-
-  Documentation link:
+  This service will be used to deploy the Vanilla Wordpress in containers.
 
   1.3 Download KubeCtl
-
-  Documentation link:
 
 
   2.
@@ -31,16 +23,17 @@ Getting started
     2.1
      Commands:
      minikube start
-     ##This command is used to create our Cluster.
+     This command is used to create our Cluster.
 
      2.2
        Now we need to create the namespace "wordpress" to deploy the Vanilla Wordpress
-      ## kubectl create namespace wordpress
+
+     - kubectl create namespace wordpress
 
 3.
    Deploying Wordpress
   To apply the yaml files we have to run the following
-  ## kubectl apply -f ./wordpress/*
+  - kubectl apply -f ./wordpress/*
 
   This command will create the wordpress service and the database that is the MySQL
 
@@ -61,7 +54,7 @@ Notes:
 
   To apply the Cert Manager config
 
-  ## kubectl apply -f ./cert-manager.yaml
+  - kubectl apply -f ./cert-manager.yaml
 
   Now check if the services of Cert Manager are running
 
@@ -78,7 +71,7 @@ Notes:
    https://ngrok.com/download
 
    To expose your minikube to internet run
-   ## ngrok http IP-OF-YOUR-WEBAPP
+   - ngrok http IP-OF-YOUR-WEBAPP
 
 4.3
     Create the ingress controller file.
@@ -106,15 +99,15 @@ Notes:
 
   Create ArgoCD namespace on Minikube
 
-  ##kubectl create namespace argocd
+  - kubectl create namespace argocd
 
   Please apply the core-install.yaml running this command
 
-  ##kubectl apply -n argocd -f core-install.yaml
+  - kubectl apply -n argocd -f core-install.yaml
 
   To access your Webapp locally run:
 
-  ##kubectl port-forward svc/argocd-server -n argocd 8080:443
+   - kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 
 Questions
@@ -131,3 +124,8 @@ where there is a need to serve five teams of developers that can’t have direct
 
 The tool that I have most knowleged is the AWS Secrets Manager.
 In this AWS Service you can manage the secrets of your applications securely and it can be encrypted using AWS KMS
+
+
+
+
+
