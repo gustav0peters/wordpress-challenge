@@ -86,9 +86,11 @@ Notes:
    When you run the ngrock command you will see this output
 
 #################################################################################
-Session Status                online                                                                                        Account                       Gustavo Peters (Plan: Free)                                                                    Version                       3.0.6                                                                                          Region                        South America (sa)                                                                         Latency                      9ms                                                                                           Web Interface                 http://127.0.0.1:4040  
+Session Status                online                                                                                        Account                       Gustavo Peters (Plan: Free)                                                                    Version                       3.0.6                                                                                          Region                        South America (sa)                                                                         Latency                      9ms                                                                    Web Interface                 http://127.0.0.1:4040  
 Forwarding                    https://5662-2804-868-d049-236d-d0f9-426b-2eec-a1a4.sa.ngrok.io -> http://127.0.0.1:80
 #################################################################################
+
+
  So, you can have your site with SSL enabled on
  https://5662-2804-868-d049-236d-d0f9-426b-2eec-a1a4.sa.ngrok.io.
 
