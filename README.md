@@ -22,7 +22,9 @@ To be honest I never had any experience with deploying websites with certmanager
      Setting up the Minikube enviroment:
     2.1
      Commands:
+
      minikube start
+
      This command is used to create our Cluster.
 
      2.2
@@ -33,7 +35,8 @@ To be honest I never had any experience with deploying websites with certmanager
 3.
    Deploying Wordpress
   To apply the yaml files we have to run the following
-  - kubectl apply -f ./wordpress/*
+
+   kubectl apply -f ./wordpress/*
 
   This command will create the wordpress service and the database that is the MySQL
 
@@ -43,7 +46,6 @@ Notes:
   3.1
     After running the apply command we have to check the URL of our Wordpress Service.
     minikube service wordpress --url -n wordpress
-
     Now our Wordpress are deployed!!
 
 4.
